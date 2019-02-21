@@ -1,0 +1,20 @@
+Declare
+Cursor C1 is select * from aluno for update of resultado;
+RC1 C1%rowtype
+
+Begin
+C1.open()
+loop
+C1 fetch into RC1
+
+if (RC1.Media < 70) and (RC1.) then
+	update RC1 set resultado=Reprovado where Current of C1
+else
+	update Rc1 set resultado=Aprovado where Current of C1
+end if
+
+exit while C1%NotFound
+end loop
+
+C1.Close()
+End
