@@ -1,0 +1,21 @@
+Declare 
+  Cursor C_pedido is select CODPEDIDO,desconto from pedido for update of desconto;
+  Cursor C_itemPedido(P_CODPEDIDO in NUMBER) is select valorunitario, CODPEDIDO, CODPRODUTO , quantidade
+                          from itempedido where codpedido=p_codpedido;
+  RC2 C_itemPedido%rowtype;
+  v_desconto number:= 0;
+Begin
+  for RC1 in C_pedido loop
+    DBMS_OUTPUT.put_line('Codigo = '||RC1.CODPEDIDO);
+    v_desconto := 0;
+    for RC2 in C_itemPedido(RC1.codpedido) loop
+        DBMS_OUTPUT.put_line('    produto = '||RC2.codproduto || ' Valor =' || RC2.valorunitario|| ' quantidade : '||RC2.quantidade|| ' Desconto unitario=' || RC2.valorunitario * (RC2.CODPRODUTO * 0.1));
+        v_desconto := v_desconto + (RC2.valorunitario * (RC2.CODPRODUTO * 0.1) * RC2.quantidade );
+        --DBMS_OUTPUT.put_line('DESCONTO = '||v_desconto);
+    end loop;
+    update pedido set DESCONTO = v_desconto where CODPEDIDO = RC1.CODPEDIDO;
+    --DBMS_OUTPUT.put_line('Adicionado '|| v_desconto ||'de DESCONTO ao '||RC1.codpedido);
+  end loop;
+End;
+
+-- SELECT * FROM PEDIDO;

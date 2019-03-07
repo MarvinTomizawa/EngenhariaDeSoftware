@@ -1,0 +1,11 @@
+Alterar a tabela pedido, adicionando a coluna Desconto
+Criar um Cursor para atualizar o Pedido 
+Criar um Cursor para ler os itens de cada pedido
+
+Para cada produto vendido (itemPedido) realizar o
+cálculo abaixo:
+   O código do produto definirá o desconto
+    por exemplo código 1 -> 10%, código 2 -> 20%
+
+A soma total de desconto deverá ser atualizada na coluna
+Desconto
