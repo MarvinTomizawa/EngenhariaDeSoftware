@@ -1,0 +1,16 @@
+Modelagem :
+	Restricoes :
+		- Orçamento : 10000Hl + 7600HM + 4000HC <= 2240000.
+		- Quantidade de piloto : HL + HM + HC = 30.
+		- Manutenção : 1HC + (4/3 * HM) + (5/3 * HL) < 40;
+		- Direção técnica : HL + HM > HC;
+		- Compras : HC + HM >= 8HL
+		
+	Função Objetivo : 
+		- Maximizar o lucro.
+		- 620Hl + 460HM + 400HC.
+		
+	Variaveis :
+		- HL.
+		- HM.
+		- HC.

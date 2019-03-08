@@ -1,0 +1,31 @@
+Modelagem :
+	Restricoes :
+		- Funcionarios trabalhando na segunda : 
+			- x1 + x2 + x3 + x4 + x5 > 18.
+		- Funcionarios trabalhando na terça : 
+			- x2 + x3 + x4 + x5 + x6  > 12.
+		- Funcionarios trabalhando na quarta : 
+			- x3 + x4 + x5 + x6 + x7  > 15.
+		- Funcionarios trabalhando na quinta :
+			- x4 + x5 + x6 + x7 + x1  > 19.
+		- Funcionarios trabalhando na sexta :
+			- x5 + x6 + x7 + x1 + x2  > 14.
+		- Funcionarios trabalhando na sabado :
+			- x6 + x7 + x1 + x2 + x3  > 16.
+		- Funcionarios trabalhando na domingo :
+			- x7 + x1 + x2 + x3 + x4  > 11.
+		- Um funcionario não pode trabalhar mais de 5 dias.
+		- Um funcionario deve trabalhar 5 dias seguidos.
+		
+	Função Objetivo: 
+		- Minimizar quantidade de empregados contratados.
+		- x1 + x2 + x3 + x4 + x5 + x6 + x7;
+	
+	Variaveis:
+		- Funcionarios trabalhando na segunda.
+		- Funcionarios trabalhando na terça.
+		- Funcionarios trabalhando na quarta.
+		- Funcionarios trabalhando na quinta.
+		- Funcionarios trabalhando na sexta.
+		- Funcionarios trabalhando na sabado.
+		- Funcionarios trabalhando na domingo.
