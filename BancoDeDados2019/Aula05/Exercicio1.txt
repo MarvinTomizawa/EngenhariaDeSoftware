@@ -1,0 +1,15 @@
+create or replace function nome(P_NOME in CLIENTE.CODCLIENTE%TYPE) return CLIENTE.NOME%type is
+  V_NOME CLIENTE.NOME%TYPE;
+BEGIN
+  SELECT NOME INTO V_NOME FROM CLIENTE WHERE CODCLIENTE = P_NOME;
+  RETURN V_NOME;
+  
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    V_NOME := 'Nenhum cliente encontrado.';
+    RETURN V_NOME;
+END;
+
+select nome(1) from dual;
+
+select codpedido, codcliente , nome(codcliente) from pedido;
