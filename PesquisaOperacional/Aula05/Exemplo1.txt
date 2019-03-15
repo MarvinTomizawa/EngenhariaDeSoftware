@@ -1,0 +1,26 @@
+Exemplo:
+	PRIMAL:
+		Objetivo: Maximizar : 10x1 + 6x2 + 5x3 
+	SA:
+		3x1 + 4x2 + x3 >= 2
+		4x1 + 6x2 - x3 <= 3
+		2x1 + x2  - x3 >= 1
+		x1 ,x3 >= 0 , x2 <= 0
+	
+	DUAL:
+		Objetivo: Minimizar :2y1 + 3y2 + 1y3
+	Sa:
+		3y1 + 4y2 + 2y3 <= 10
+		4y1 + 6y2 + x2  >= 6
+		y1  - y2  - x3  <= 5
+		x1 ,x3 >= 0 , x2 <= 0
+		
+
+Primal : Modelo original;
+Dual   : Aplicado para melhorar o processo e buscar a solução ótima;
+Alternar funções objetivos da primal. Ex: PRIMAL=Maximizar ; DUAL=Minimizar;
+Quantidade de restrições em primal = Quantidade de variaveis do dual e vice-versa;
+Constantes de primal = Coeficientes do dual;
+Transpor valores do primal para o dual: Linha vira coluna, coluna vira linha;
+Dual do dual é o primal;
+Se a restrição do primal K for igualdade então a variavel no dual é sem restrição(< > ou =);
