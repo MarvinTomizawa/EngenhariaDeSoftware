@@ -1,0 +1,20 @@
+create or replace procedure saveInRequisicaoCompra(P_codProduto in PRODUTO.CODPRODUTO%type, P_quantidade in number) is
+begin
+  insert into REQUISICAO_COMPRA values(contadorproduto.nextval,P_codProduto,sysdate,P_quantidade);
+end;
+
+create or replace function quantidadevendidaproduto(P_codProduto in produto.codproduto%type) return number is
+  v_quantidadeVendida number:=0;
+  Cursor C1 is select quantidade from itempedido where codproduto = P_codProduto;  
+  teste varchar2(50);
+begin
+  for RC1 in C1 loop
+    v_quantidadeVendida:= v_quantidadeVendida + RC1.quantidade;
+  end loop;
+  SAVEINREQUISICAOCOMPRA(P_codProduto,v_quantidadeVendida);
+  return v_quantidadeVendida;
+Exception
+  when no_data_found then
+    v_quantidadeVendida:=0;
+    RETURN v_quantidadeVendida;
+end;

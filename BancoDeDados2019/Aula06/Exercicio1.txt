@@ -1,0 +1,12 @@
+create or replace function valortotalpedido(P_CodCliente in number) return number IS
+  v_valortotal number:=0;
+begin
+  select NVL(sum(p.valortotal),0) into v_valortotal from PEDIDO p inner join cliente c on c.codcliente = p.codcliente where c.codcliente = P_CodCliente;
+  
+  return v_valortotal;
+
+Exception
+  when no_data_found then
+    v_valortotal:= 0;
+    return v_valortotal;
+end;

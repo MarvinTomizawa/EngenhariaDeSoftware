@@ -1,0 +1,6 @@
+1) Criar uma function que ao receber o código do cliente, traga o valor total dos pedidos que ele efetuou
+
+2)
+  a) Criar uma function que receba o código do produto e que através de um cursor, encontre a quantide vendida do mesmo.
+  b) Deve ser executada uma procedure para gravar uma requisicao de compra para cada produto com a sua quantidade vendida
+  
