@@ -1,0 +1,14 @@
+1) Criar uma tabela calendario, a mesma terá a data e o status 0 se for final de semana
+    e 1 se for dia útil.
+    a) Criar uma PACKAGE.
+     a1) Função para gerar as datas entre 2000 e 2020 (todos os dias). 
+     a2) Função para calcular a quantidade de dias úteis entre dois períodos (não vai constar na assinatura da package)
+     a3) Procedure que receba um valor e uma data e calcule os juros até a data atual, sendo que deve contar somente os dias uteis para o cálculo.
+A fórmula utilizada deve os juros diários informado, aplicados dia a dia ou seja, juros sobre juros.
+Por exemplo
+ Valor 			100,00 
+ Juros diários		  1%
+
+No primeiro dia 100 	* 0,01 
+No segundo dia  101 	* 0,01
+No terceiro dia 101,01  * 0,01
