@@ -1,0 +1,30 @@
+Seca rapido (SR) Super seca(SS)
+
+Primal
+Função objetivo:
+	Minimizar gasto : 0,5x1 + 0,75x2 + 1SSR + 1,1LSR + 0,5ASS + 0,75BSS + 1SSS + 1,1LSS
+
+Restrições:
+	SR = 100 litros 
+	SS = 250 litros
+	
+	0,6S ASR + 0,3BSR + SSR >= 0,25
+	0,4L ASR + 0,7LSR + LSR >= 0,5
+	
+	0,6S ASS + 0,3BSS + SSS >= 0,2
+	0,4L ASS + 0,7BSS + LSS <= 0,5
+	
+	ASR + BSR + SSR + LSR = 100
+	ASS + BSS + SSS + LSS = 250
+	
+Variaveis:
+ASR
+BSR
+Silicato(SSR)
+Linhaca(LSR)
+ASS
+BSS
+Silicato(SSS)
+Linhaca(LSS)
+
+Função objetivo:
