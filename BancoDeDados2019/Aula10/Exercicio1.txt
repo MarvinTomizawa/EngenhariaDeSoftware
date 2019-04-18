@@ -1,0 +1,17 @@
+declare 
+  cursor c1 is select count(deptno) quantidade, DEPTNO codigo from emp group by deptno;
+  RC1 C1%rowtype;
+  
+begin
+  open c1;
+  
+  loop
+    fetch c1 into RC1;
+    exit when c1%NOTFOUND;
+    dbms_output.put_line('Quantidade de usuarios: ' || RC1.quantidade || ' Codigo: '|| RC1.codigo);  
+  end loop;
+  
+  
+end;
+
+
