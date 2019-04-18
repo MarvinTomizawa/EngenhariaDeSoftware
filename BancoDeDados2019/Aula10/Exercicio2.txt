@@ -1,0 +1,16 @@
+declare 
+  Cursor C2 is select  COD_DEP,med_sal, VLR_SAL from resultado for UPDATE;
+  mediaSal number;
+  somaSal number;
+begin 
+
+  for RC2 in C2 loop
+    select sum(sal), avg(sal) into  mediaSal, somaSal from emp where DEPTNO = RC2.COD_DEP group by deptno;
+    update resultado set MED_SAL = mediaSal, vlr_sal = somaSal where current of C2;
+    DBMS_OUTPUT.PUT_LINE(RC2.COD_DEP);
+  end loop;
+  
+exception
+  when others then
+      SYS.DBMS_OUTPUT.PUT_LINE('TESTE');
+end;
