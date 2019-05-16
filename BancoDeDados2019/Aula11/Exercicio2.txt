@@ -1,0 +1,3 @@
+select * from pivotTable  
+  unpivot(QTDE for NR_CARGO in ("54","42","43","53"))
+  order by CD_DEPTO, NR_CARGO

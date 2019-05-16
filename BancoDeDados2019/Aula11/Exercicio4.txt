@@ -1,0 +1,2 @@
+create INDEX indice ON func(NM_FUNC) ASC;
+DROP INDEX INDICE;

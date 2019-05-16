@@ -1,0 +1,15 @@
+select * from func;
+
+create table pivotTable as
+select * from (
+  select CD_DEPTO, NR_CARGO
+  from FUNC F
+)
+pivot
+(
+  count(NR_CARGO)
+  for NR_CARGO in (54,42,43,53)
+)
+order by CD_DEPTO;
+
+select * from pivotTable;
