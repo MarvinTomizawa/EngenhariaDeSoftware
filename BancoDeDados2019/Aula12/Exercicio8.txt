@@ -1,0 +1,5 @@
+select Regexp_replace (descr,'[^[:digit:]$]','') from toys;
+
+Select RegExp_Instr('AStringWithNumbers1234 etc','[^[:alpha:]]')From Dual;
+--[^[:digit:]] = Letra
+--[^[:alpha:]] = Numero

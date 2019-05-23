@@ -1,0 +1,15 @@
+create table toys(
+id number, descr varchar2(20)
+);
+
+insert into toys values (1,'TOY1');
+insert into toys values (2,'T1OY2');
+insert into toys values (3,'1TOY1');
+insert into toys values (4,'999');
+insert into toys values (5,'888');
+insert into toys values (6,'TOY2007');
+
+select descr from TOYS where REGEXP_LIKE(DESCR,'[^[:digit:]]');
+
+-- 'i' => independent (não é case sensetive)
+-- 'c' => é case sensetive

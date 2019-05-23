@@ -1,0 +1,11 @@
+select REGEXP_COUNT('Rodrigo righeti', 'i', 2, 'c') from dual;
+
+select REGEXP_COUNT('Ricardo rezende', 'R', 1, 'c') from dual;
+
+-- 5 espaços
+SELECT REGEXP_REPLACE('Rodrigo     Righetti','( ){5}', '')
+FROM dual;
+
+-- 5 ou mais espaços
+SELECT REGEXP_REPLACE('Rodrigo        Righetti','( ){5,}', '')
+FROM dual;

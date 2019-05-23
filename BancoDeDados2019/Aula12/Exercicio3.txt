@@ -1,0 +1,3 @@
+select NM_FUNC, NM_SOBRENOME, dt_nasc
+from func
+where REGEXP_LIKE(nm_FUNC,'^FL[aá]$','i');

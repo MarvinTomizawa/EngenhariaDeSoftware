@@ -1,0 +1,7 @@
+select NM_FUNC, NM_SOBRENOME, dt_nasc
+from func
+where REGEXP_LIKE(nm_FUNC,'^.....$','i');
+
+select NM_FUNC, NM_SOBRENOME, dt_nasc
+from func
+where REGEXP_LIKE(nm_FUNC,'^.{10}$','i');
