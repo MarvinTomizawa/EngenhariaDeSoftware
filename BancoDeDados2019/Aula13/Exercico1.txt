@@ -1,0 +1,8 @@
+create user aula identified by 123
+account lock
+default tablespace Users
+temporary tablespace;
+
+grant connect, resource to aula;
+
+alter table user account unlock;
