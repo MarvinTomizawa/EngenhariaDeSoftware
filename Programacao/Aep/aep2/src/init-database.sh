@@ -1,0 +1,1 @@
+docker run --rm --name postgres-docker -e POSTGRES_PASSWORD=docker -e POSTGRES_USER=marvin -e POSTGRES_DB=aep -d -p 5432:5432 postgres
