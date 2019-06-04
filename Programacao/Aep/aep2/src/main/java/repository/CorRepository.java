@@ -52,8 +52,8 @@ public class CorRepository extends Repository<Cor>{
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String lastName = resultSet.getString("Lname");
-                cores.add(new Cor(id, lastName));
+                String cor = resultSet.getString("cor");
+                cores.add(new Cor(id, cor));
             }
 
         } catch (SQLException e) {

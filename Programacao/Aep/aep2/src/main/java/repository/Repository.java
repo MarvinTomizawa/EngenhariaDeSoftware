@@ -20,9 +20,9 @@ public abstract class Repository<T> {
 
     private Connection iniciaConeccao() throws SQLException {
         return DriverManager.getConnection(
-                "jdbc:postgresql://192.168.99.100:5432/aep",
-                "marvin",
-                "docker");
+                "jdbc:postgresql://localhost/aep",
+                "postgres",
+                "unicesumar");
     }
 
     private void finalizaConeccao(Connection connection) throws SQLException{
