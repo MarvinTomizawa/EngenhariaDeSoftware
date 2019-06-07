@@ -43,4 +43,9 @@ public class BilheteAereo {
     public Date getData() {
         return data;
     }
+
+    @Override
+    public String toString() {
+        return "Bilhete aereo #" + id + "Dia:"+ data.toString() + " Voo numero: "+ voo + " De:" + origem + " Para:" + destino;
+    }
 }

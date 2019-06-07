@@ -20,9 +20,9 @@ public abstract class Repository<T> {
 
     private Connection iniciaConeccao() throws SQLException {
         return DriverManager.getConnection(
-                "jdbc:postgresql://localhost/aep",
-                "postgres",
-                "unicesumar");
+                "jdbc:postgresql://192.168.99.100/aep",
+                "marvin",
+                "docker");
     }
 
     private void finalizaConeccao(Connection connection) throws SQLException{
@@ -71,10 +71,30 @@ public abstract class Repository<T> {
         }
     }
 
+    public final void commit(){
+        try {
+            Connection connection = iniciaConeccao();
+            connection.commit();
+            finalizaConeccao(connection);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public final void excluirTodos(){
+        try{
+            Connection connection = iniciaConeccao();
+            excluirTodosSql(connection);
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     abstract void inserirSql(Connection connection, T objeto);
     abstract void criaTabela(Connection connection);
     abstract List<T> obterTodasSql(Connection connection);
     abstract void alterarSql(Connection connection, T objeto);
     abstract void excluirSql(Connection connection, int id);
-
+    abstract void excluirTodosSql(Connection connection);
 }

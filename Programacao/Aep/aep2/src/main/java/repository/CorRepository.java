@@ -6,7 +6,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CorRepository extends Repository<Cor>{
+public class
+CorRepository extends Repository<Cor>{
 
     @Override
     void criaTabela(Connection connection) {
@@ -48,13 +49,14 @@ public class CorRepository extends Repository<Cor>{
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-            statement.close();
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String cor = resultSet.getString("cor");
                 cores.add(new Cor(id, cor));
             }
+
+            statement.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,11 +82,24 @@ public class CorRepository extends Repository<Cor>{
 
     @Override
     void excluirSql(Connection connection, int id) {
-        String sql = "delete cor where id = ?";
+        String sql = "delete from cor where id = ?";
 
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1,id);
+            statement.execute(sql);
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public final void excluirTodosSql(Connection connection){
+        String sql = "delete from cor";
+
+        try{
+            Statement statement = connection.createStatement();
             statement.execute(sql);
             statement.close();
         } catch (SQLException e) {
