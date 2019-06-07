@@ -1,0 +1,6 @@
+Dummy = Variaveis fantasmas que servem para igualar a equação
+*Todos os nós devem ser ligados aos dummys.
+
+Nós = Quantidade de oferta e demanda.
+	Valores positivos => Demanda(Valores recebidos).
+	Valores negativos => Oferta(Quantidade enviada).
