@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BilheteAereoRepository extends Repository<BilheteAereo> {
+public class BilheteAereoRepository extends AbstractRepository<BilheteAereo> {
     @Override
     void inserirSql(Connection connection, BilheteAereo objeto) {
         String sql = "insert into BilheteAereo(id, voo, destino, origem, data) values(?, ?, ?, ?, ?)";

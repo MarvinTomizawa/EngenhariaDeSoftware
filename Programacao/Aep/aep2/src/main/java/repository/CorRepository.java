@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class
-CorRepository extends Repository<Cor>{
+CorRepository extends AbstractRepository<Cor> {
 
     @Override
     void criaTabela(Connection connection) {
