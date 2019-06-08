@@ -1,6 +1,6 @@
-package repository;
+package br.com.marvin.repository;
 
-import entity.Cor;
+import br.com.marvin.entity.Cor;
 
 import java.sql.*;
 import java.util.ArrayList;

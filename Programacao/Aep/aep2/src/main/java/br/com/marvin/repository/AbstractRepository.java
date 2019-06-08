@@ -1,4 +1,4 @@
-package repository;
+package br.com.marvin.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

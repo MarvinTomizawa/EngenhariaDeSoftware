@@ -1,12 +1,11 @@
-package repository;
+package br.com.marvin.repository;
 
-import java.util.List;
+import java.util.Collection;
 
 public interface Repository<T> {
     void excluirTodos();
-    void commit();
     void excluir(int id);
     void alterar(T objeto);
-    List<T> obterTodas();
+    Collection<T> obterTodas();
     void inserir(T objeto);
 }

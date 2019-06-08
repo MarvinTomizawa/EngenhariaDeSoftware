@@ -1,4 +1,4 @@
-package entity;
+package br.com.marvin.entity;
 
 public class Cor {
     private final int id;

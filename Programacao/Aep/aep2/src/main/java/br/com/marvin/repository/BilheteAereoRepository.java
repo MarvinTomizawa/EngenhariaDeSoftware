@@ -1,6 +1,6 @@
-package repository;
+package br.com.marvin.repository;
 
-import entity.BilheteAereo;
+import br.com.marvin.entity.BilheteAereo;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -67,7 +67,6 @@ public class BilheteAereoRepository extends AbstractRepository<BilheteAereo> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return cores;
     }
 

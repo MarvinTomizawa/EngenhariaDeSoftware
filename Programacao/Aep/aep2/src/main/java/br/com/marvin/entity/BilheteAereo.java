@@ -1,4 +1,4 @@
-package entity;
+package br.com.marvin.entity;
 
 import java.util.Date;
 
