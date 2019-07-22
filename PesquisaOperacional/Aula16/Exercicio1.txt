@@ -1,0 +1,8 @@
+(Caminho minimo) ou (menor caminho):
+	Arco(Ligação entre um ponto e outro) significa uma distância de um nó para outro.
+	é trabalhado como se fosse binário, é passado o caminho onde ele passou:
+		Onde passar marca com 1.
+		Onde não passar marca com 0.
+		Onde ele ta saindo marca com -1.
+		Ponto de saida: -1.
+		Ponto de chegada: 1.
