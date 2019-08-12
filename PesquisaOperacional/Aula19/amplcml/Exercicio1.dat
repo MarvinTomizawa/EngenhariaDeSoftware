@@ -1,0 +1,52 @@
+# Define todos as variaveis
+set Turmas := PO, BD, ES, IA, CN, II,IU, GF, ET, GS, AA;
+set Professores:= JUNIOR, VINICIUS, VANDER, INES, WESLEY, DANTE, CELIA, VITORIA;
+
+# Atribui valores aos parametross
+param carga_horaria_turma:= # Nome da turma | Quantidade em horas de aula
+PO 10
+BD 6
+ES 4
+IA 2
+CN 14
+II 2
+IU 2
+GF 4
+ET 4
+GS 2
+AA 6;
+		
+param carga_horaria_professor:= # Nome do professor | Quantidade em horas disponiveis
+JUNIOR 40
+VINICIUS 04
+VANDER 06
+INES 12
+WESLEY 08
+DANTE 08
+CELIA 06
+VITORIA 04;
+
+param conflito_turma:
+    PO BD ES IA CN II IU GF ET GS AA:=
+PO   0  1  0  0  0  0  0  0  0  0  0
+BD   1  0  0  0  0  0  1  0  0  0  1
+ES   0  0  0  0  0  0  0  0  0  1  0
+IA   0  0  0  0  0  0  0  0  0  0  0
+CN   0  0  0  1  0  0  0  1  1  0  0 
+II   0  0  0  1  0  0  0  1  1  0  0 
+IU   0  1  0  0  0  0  0  0  0  0  1
+GF   0  0  0  0  1  1  0  0  1  0  0 
+ET   0  0  0  0  1  0  0  1  0  0  0
+GS   0  0  1  0  0  0  0  0  0  0  0
+AA   0  1  0  0  0  0  1  0  0  0  0;
+
+param satisfacao_professor:
+            PO BD ES IA CN II IU GF ET GS AA:=
+JUNIOR      10  9  3  7  6  4  8  2  0  0  5
+VINICIUS     2 10  0  0  0  7  7  0  0  0  0
+VANDER       8  8  0  6  8  4  4  5  5  5  0
+INES         1  4  0 10  8  6  5  6  4  4  0
+WESLEY       2  1  8  0  0  3  3  0  0  0  8
+DANTE        4  0  7  0  0  1  0  0  0  0 10
+CELIA        3  0  0  6  5  2  2 10 10  9  0
+VITORIA      6  7  4  3  2  0  1  5  9 10  9; 
