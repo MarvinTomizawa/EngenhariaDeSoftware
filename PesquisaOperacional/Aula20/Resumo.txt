@@ -1,0 +1,9 @@
+Programação inteira: Busca solução ótima emcima de restrições relaxadas.
+	Para problemas menores é pior ainda.
+
+Tirar uma restrição = solução relaxada.
+	Motivo: Buscar qual seria a solução ótima.
+	
+Real: outra pode ser inteira.
+Mista: uma parte pode ser relaxada e outra pode ser inteira.
+
