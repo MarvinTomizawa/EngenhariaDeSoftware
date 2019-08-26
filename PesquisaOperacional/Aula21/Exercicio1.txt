@@ -1,0 +1,9 @@
+Função objetivo:
+	Min: 
+		- X1A + X2A + X3A + X4A + X1B + X2B + X3B + X4B + X1C + X2C + X3C + X4C
+		
+	Restrição 
+		- X1A + X2A + X3A + X4A =  1
+		- X1B + X2B + X3B + X4B =  1
+		- X1C + X2C + X3C + X4C =  1
+	
