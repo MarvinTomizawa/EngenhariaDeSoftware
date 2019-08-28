@@ -1,0 +1,11 @@
+
+CREATE SEQUENCE DIMENSAO_DO_ORGO_FUNCIONARI846;
+
+CREATE TABLE Dimensao_do_orgo_funcionario (
+                sk_orgao NUMBER NOT NULL,
+                nk_orgao NUMBER NOT NULL,
+                nm_orgaosuperior VARCHAR2(50) NOT NULL,
+                nm_OrgaoSubordinado VARCHAR2(50) NOT NULL,
+                CONSTRAINT DIMENSAO_DO_ORGO_FUNCIONARI950 PRIMARY KEY (sk_orgao)
+);
+
