@@ -1,0 +1,12 @@
+Maximizar 7fl + 5fs + 12dl + 10ds
+
+Restrição
+	20fl + 15fs + 12dl + 10ds <= 25
+	fl + fs = 1
+	dl + ds = 1
+	fl + ds = 1
+	fs + dl = 1
+	fl <= 1
+	fs <= 1
+	dl <= 1
+	ds <= 1
