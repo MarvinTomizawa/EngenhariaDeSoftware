@@ -1,0 +1,24 @@
+x11 x12 4
+x11 x21 7
+x12 x13 3
+x12 x22 6
+x13 x14 6
+x13 x23 6
+x14 x24 8
+x21 x22 8
+x21 x31 2
+x22 x23 6
+x22 x32 3
+x23 x24 8
+x23 x33 1
+x24 x34 8
+x31 x32 3
+x32 x33 1
+x33 x34 8
+
+Restrição
+	x34 = 1
+	x11 = -1
+	
+	-1 de onde sair
+	+1 para onde ir
