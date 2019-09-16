@@ -1,0 +1,11 @@
+Função objectivo:
+	Maximizar o lucro:25x1 + 30x2
+	
+	Restrições:
+		x1 + x2 < 40
+		200x1 <= 6000
+		140x2 <= 4000
+	
+	Variaveis:
+		x1 = Mola
+		x2 = Lamina
