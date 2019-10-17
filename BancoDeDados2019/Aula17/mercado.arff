@@ -1,0 +1,21 @@
+@relation mercado
+ 
+@attribute leite {sim, nao}
+@attribute cafe {sim, nao}
+@attribute cerveja {sim, nao}
+@attribute pao {sim, nao}
+@attribute manteiga {sim, nao}
+@attribute arroz {sim, nao}
+@attribute feijao {sim, nao}
+ 
+@data
+nao, sim, nao, sim, sim, nao, nao
+sim, nao, sim, sim, sim, nao, nao
+nao, sim, nao, sim, sim, nao, nao
+sim, sim, nao, sim, sim, nao, nao
+nao, nao, sim, nao, nao, nao, nao
+nao, nao, nao, nao, sim, nao, nao
+nao, nao, nao, sim, nao, nao, nao
+nao, nao, nao, nao, nao, nao, sim
+nao, nao, nao, nao, nao, sim, sim
+nao, nao, nao, nao, nao, sim, nao
