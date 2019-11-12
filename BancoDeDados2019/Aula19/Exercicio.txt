@@ -1,0 +1,52 @@
+{"Estudio":{
+	"nome":"Estudio marvin",
+	"proprietario": "marvin",
+	"faturamentoanoanterior": 2.00,
+	"datafundacao": "2019-11-12",
+	"filmes":[
+		{
+			"nome": "Pokemon",
+			"meses": 10,
+			"anolancamento": 2019,
+			"custototal": 1.00,
+			"atores":[
+				{
+					"nome": "marvin",
+					"nacionalidade": "Brasileiro",
+					"idade": 20,
+					"sexo": "m",
+					"atua":[
+						{
+							"personagem":"Pikachu",
+							"cache": 10.00
+						},
+						{
+							"personagem":"Squirdle",
+							"cache": 1.00
+						}
+					]
+				}
+			]
+		},
+		{
+			"nome": "Pokemon 2",
+			"meses": 1,
+			"anolancamento": 2019,
+			"custototal": 1.00,
+			"atores":[
+				{
+					"nome": "marvin",
+					"nacionalidade": "Brasileiro",
+					"idade": 20,
+					"sexo": "m",
+					"atua":[
+						{
+							"personagem":"Squirdle",
+							"cache": 1.00
+						}
+					]
+				}
+			]
+		}
+	]
+}}

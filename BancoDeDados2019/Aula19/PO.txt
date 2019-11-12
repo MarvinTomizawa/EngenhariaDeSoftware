@@ -1,0 +1,9 @@
+O que é analise de sensibilidade?
+	Que mudanças que eu faço para que a minha função seja melhorada, ou está escaça.
+	
+O que é preço sombra?
+	Como eu posso aumentar a função objetivo sem maximizar.
+	
+O que é custo reduzido?
+	Zerar uma variavel, para saber qual o custo que se tem para coloca-la de volta no resultado.
+	Para descobrir qual o peso de uma variavel.
