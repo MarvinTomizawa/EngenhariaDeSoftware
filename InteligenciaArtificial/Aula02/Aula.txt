@@ -1,0 +1,30 @@
+Agentes inteligente: Qualquer coisa que percebe seu ambiente por meio de sensores e atua por meio de atuadores.
+	Sensores: Percebem alguma coisa no ambiente que é inserido.
+	Atuadores: Realizam uma ação após receberem um estimulo.
+
+[Conceitos]
+	Perceção: Alguma entrada que vai ter em cima de um problema [Leitura do ambiente].
+	Sequencia de percepção: Todas as percepção feitas desde o inicio do funcionamento.
+	Função Agente: Mapeamento de ação para determinada perscepção
+
+Tipos de agentes:	
+	Agente Rascional: Maximiza o desempenho esperado.
+		Precisa de 4 fatores para definir um agente racional ideal:
+			- Medida de desempenho para definr o fator de sucesso.
+			- Conhecimento anterior que tem sobre o ambiente.
+			- Ações que o agente pode realizar.
+			- Histórico de percepção.
+	Agente Onisciente: Antes de fazer uma ação ja sabe o resultado dela.
+	Agente Perfeito: Maximiza o desempenho real.
+
+Aprendizagem: 
+
+Agente bem sucedido:
+	Fase do projeto: Calculos feito pelo projetista (Levantamento de ações para ser tomado)
+	Fase deliberação: Calculo feito pelo agente para ver qual ação a ser tomada.
+	Fase de aprendizagem: Calculo feito pelo agente para decidir o como modificar seu comportamento.
+	
+Autonomia: Deve aprender o que puder para compensar o conhecimento prévio parcial ou incompleto.
+	- Na prática raramente o agente tem autonomia completa.
+
+Autonomo perfeito: Deve ter sucesso após ser inserido em determiado ambiente, realizar reconhecimento e realizar uma aprendizagem.
