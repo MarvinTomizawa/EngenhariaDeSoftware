@@ -28,3 +28,43 @@ Autonomia: Deve aprender o que puder para compensar o conhecimento prévio parci
 	- Na prática raramente o agente tem autonomia completa.
 
 Autonomo perfeito: Deve ter sucesso após ser inserido em determiado ambiente, realizar reconhecimento e realizar uma aprendizagem.
+
+Propriedade do ambiente:
+	
+Totamente observavel x parcialmente observavel
+	Totalmente: Tem visão do ambiente inteiro.
+	Parcialmente: Não tem visão do ambiente inteiro (ponto cego carro).
+
+Deterministico x estocástico:
+	Deterministico: Toda ação depende de uma ação anterior (um fator da uma resposta para onde agir)
+	Estocástico: A ação pode depender de uma junção de fatores.
+
+Episódico x sequencial
+	Episódico: Percebe e atua.
+	Sequencial: Pensa utilizando ações que podem ser que aconteçam depois de algumas ações.
+
+Dinamico x estático
+	Dinamico: Depois de uma percepção o ambiente pode mudar por uma ação externa enquanto está sendo tomado decisões(Antes de ele perceber e atuar o ambiente muda e ele vai precisar realizar outra percepção)
+	Estático: Depois de uma percepção o ambiente não muda
+
+Discreto x continuo
+	Discreto: Numero de percepções mais controladas, que n muda constantemente.
+	Contínuo: Várias percepções que mudam a todo momento.
+
+Agente unico x agente múltiplo:
+
+Agente reativo(reflexo) simples: seleciona ação com base na percepção atual (problem pequeno).
+	Regra condição-ação: para cada percepção possui uma ação.
+
+Agente reativo baseado em modelo: Depende do histórico de percepções
+	- Verifica como o ambiente evolui independente do agente.
+	- Verifica o que as ações dele afetam o ambiente.
+
+Agente baseado em objetivo: pensando no objetivo e o que as ações (baseado em modelo) geram de resultado é possivel selecionar uma ação
+	- Direta: Resultado de uma unica ação chega no objetivo
+	- Mais complexa: Resultado de um conjunto de ações chega no objetivo
+	- Utiliza de algoritmos de Busca e Planejamento.
+
+Agente baseado em utilidade: Verifica se algo é util ou n para fazer.
+	- Possui uma função utilidade.
+	
