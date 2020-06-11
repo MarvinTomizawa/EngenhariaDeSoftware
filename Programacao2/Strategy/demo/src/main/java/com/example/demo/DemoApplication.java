@@ -1,36 +1,31 @@
 package com.example.demo;
 
-import com.example.demo.mobs.Goblin;
-import com.example.demo.mobs.Knight;
-import com.example.demo.weapon.Dagger;
-import com.example.demo.weapon.Wand;
+import com.example.demo.mobs.Player;
 
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		Knight knight = new Knight();
-		Goblin goblin1 = new Goblin();
-		Goblin goblin2 = new Goblin();
-		Goblin goblin3 = new Goblin();
-
-		System.out.println("Atacando com uma espada");
-		knight.attack(goblin1);
-		knight.attack(goblin1);
-		System.out.println("Vida do goblin 1:" + goblin1.getLife());
+		Player knight = Player.Builder.createPlayer().life(20).mana(0).name("Marvin").asKnight().build();
+		Player enemy = Player.Builder.createPlayer().life(100).mana(0).name("Enemy").asKnight().build();
+		knight.attack(enemy);
+		knight.attack(enemy);
+		System.out.println(enemy.stats());
+		System.out.println(knight.stats());
+		System.out.println();
 
 
-		System.out.println("Atacando com uma adaga");
-		knight.setWeapon(new Dagger());
-		knight.attack(goblin2);
-		knight.attack(goblin2);
-		System.out.println("Vida do goblin 2:" +goblin2.getLife());
+		Player mage = Player.Builder.createPlayer().life(10).mana(20).name("Marvin2").asMage().build();
+		mage.attack(enemy);
+		mage.attack(enemy);
+		System.out.println(enemy.stats());
+		System.out.println(mage.stats());
+		System.out.println();
 
-
-		System.out.println("Atacando com um cajado mágico");
-		knight.setWeapon(new Wand());
-		knight.attack(goblin3);
-		knight.attack(goblin3);
-		System.out.println("Vida do goblin 3:" +goblin3.getLife());
+		Player assassin = Player.Builder.createPlayer().life(15).mana(5).name("Marvin3").asAssassin().build();
+		knight.attack(enemy);
+		knight.attack(enemy);
+		System.out.println(enemy.stats());
+		System.out.println(	assassin.stats());
+		System.out.println();
 	}
-
 }

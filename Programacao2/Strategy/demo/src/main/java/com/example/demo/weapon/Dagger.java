@@ -1,12 +1,17 @@
 package com.example.demo.weapon;
 
-import com.example.demo.mobs.Mob;
+import com.example.demo.mobs.Player;
 
 import java.util.Random;
 
 public class Dagger implements Weapon {
     @Override
-    public void attack(Mob mob) {
+    public String toString() {
+        return "Dagger";
+    }
+
+    @Override
+    public void attack(Player mob) {
         int critChance = new Random().nextInt(5);
         if(critChance > 3){
             mob.takeDamage(10);
