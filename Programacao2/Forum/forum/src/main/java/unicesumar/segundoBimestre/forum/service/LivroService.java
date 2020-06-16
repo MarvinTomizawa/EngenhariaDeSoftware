@@ -25,6 +25,23 @@ public class LivroService {
     }
 
     public UUID saveNewLivro(Livro livro) {
+        validateLivro(livro);
+        return livroRepository.save(livro).getId();
+    }
+
+    public UUID updateLivro(UUID id, Livro livro) {
+        validateLivro(livro);
+        return livroRepository.save(livro).getId();
+    }
+
+    public UUID deleteLivro(UUID uuid) {
+        var livroDeletado = livroRepository.findById(uuid).orElseThrow(LivroNotFoundException::new);
+
+        livroRepository.delete(livroDeletado);
+        return uuid;
+    }
+
+    private void validateLivro(Livro livro){
         if(livro.getTitle().isEmpty()){
             throw new LivroInvalidException("Titulo");
         }
@@ -36,18 +53,5 @@ public class LivroService {
         if(livro.getAuthor().isEmpty()){
             throw new LivroInvalidException("Numero de paginas");
         }
-
-        return livroRepository.save(livro).getId();
-    }
-
-    public UUID updateLivro(UUID id, Livro livro) {
-        return livroRepository.save(livro).getId();
-    }
-
-    public UUID deleteLivro(UUID uuid) {
-        var livroDeletado = livroRepository.findById(uuid).orElseThrow(LivroNotFoundException::new);
-
-        livroRepository.delete(livroDeletado);
-        return uuid;
     }
 }

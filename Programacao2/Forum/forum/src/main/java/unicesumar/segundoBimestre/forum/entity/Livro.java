@@ -12,7 +12,16 @@ import java.util.UUID;
 @Getter
 public class Livro {
 
+    protected Livro(){}
+
     public Livro(String title, int pageNumber, String author) {
+        this.title = title;
+        this.pageNumber = pageNumber;
+        this.author = author;
+    }
+
+    public Livro(UUID id, String title, int pageNumber, String author) {
+        this.id = id;
         this.title = title;
         this.pageNumber = pageNumber;
         this.author = author;
