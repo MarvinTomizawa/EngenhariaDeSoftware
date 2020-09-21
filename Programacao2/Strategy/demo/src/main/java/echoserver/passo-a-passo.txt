@@ -1,0 +1,15 @@
+Inicia o server
+Server espera próxima conexão
+Inicia o client
+É digitado um comando no client (Digitado no input do client)
+Client armazena a entrada
+Client abre a conexão com o server
+Client chama o server (print no output do server)
+Server recebe a chamada (Le da sua input)
+Server valida a entrada
+Se a chamada for para "listar"
+Listar os diretorios recursivamente usando File.getName()
+Server retorna uma resposta pelo socket de acordo com o que foi pedido pelo client (escreve no seu output)
+Client recebe a resposta (no input do server)
+Cliente printa resposta no console
+Cliente fecha conexão(No output do client)
